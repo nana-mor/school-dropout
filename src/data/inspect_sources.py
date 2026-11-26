@@ -54,7 +54,6 @@ def inspect_dbf(file_path):
     print("\nColumns:")
     print(table.field_names)
 
-    # Read only the first five records
     records = []
 
     for index, record in enumerate(table):
@@ -79,7 +78,6 @@ def inspect_directory(directory):
 
 
     for file_path in files:
-        print(file_path)
         if not file_path.is_file():
             continue
 
@@ -91,7 +89,6 @@ def inspect_directory(directory):
 
         elif extension == ".dbf":
             inspect_dbf(file_path)
-# /home/nani/Documents/Proyectos/educacion/data/raw/pobreza_estatal.xlsx
 
 if __name__ == "__main__":
     inspect_directory(RAW_DATA_PATH)
